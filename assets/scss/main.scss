@@ -1,0 +1,43 @@
+@import './value.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+}
+
+@each $name, $color in $main-colors {
+    .n-bg-#{$name} {
+        background-color: $color;
+    }
+}
+
+.n-bg-g-dblue-gBlue {
+    background-image: linear-gradient(map-get($main-colors, dblue), map-get($main-colors, gblue) );
+}
+
+.n-h-100 {
+    height: 100vh;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.transition-100 {
+    transition: 1s;
+}
+.transition-50 {
+    transition: 0.5s;
+}
+.transition {
+    transition: 0.3s;
+}
+
